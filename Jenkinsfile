@@ -15,19 +15,31 @@ pipeline{
     stages{
         stage('Git Clone'){
             steps{
-                gitClonePub 'https://github.com/Rahul7-77/jenkins-sl-test.git'
+                script{
+                    gitClonePub 'https://github.com/Rahul7-77/jenkins-sl-test.git'
+                }
             }
         }
         stage('Compile'){
             steps{
-                npmBuild()
+                script{
+                    npmBuild()
+                }
             }
         }
         stage('OWASP Scan'){
-            owaspscan()
+            steps{
+                script{
+                    owaspscan()
+                }
+            }
         }
         stage('Docker Build'){
-            buildimage 'jsl:v1'
+            steps{
+                script{
+                    buildimage 'jsl:v1'
+                }
+            }
         }
     }
 }
