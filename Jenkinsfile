@@ -38,7 +38,7 @@ pipeline{
         stage('Docker Build'){
             steps{
                 script{
-                    buildimage 'jsl:v1'
+                    buildImage 'jsl:v1'
                 }
             }
         }
