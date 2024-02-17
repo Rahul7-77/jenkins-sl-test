@@ -28,13 +28,13 @@ pipeline{
                 }
             }
         }
-        // stage('OWASP Scan'){
-        //     steps{
-        //         script{
-        //             owaspscan()
-        //         }
-        //     }
-        // }
+        stage('OWASP Scan'){
+            steps{
+                script{
+                    owaspscan.call()
+                }
+            }
+        }
         stage('Docker Build'){
             steps{
                 script{
