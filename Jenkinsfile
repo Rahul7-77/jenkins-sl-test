@@ -18,7 +18,7 @@ pipeline{
                 // script{
                 //     gitClonePub 'https://github.com/Rahul7-77/jenkins-sl-test.git'
                 // }
-                sh 'git clone https://github.com/Rahul7-77/jenkins-sl-test.git'
+                git branch: 'main', changelog: false, poll: false, url: 'https://github.com/Rahul7-77/jenkins-sl-test.git'
             }
         }
         stage('Compile'){
