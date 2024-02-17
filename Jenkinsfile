@@ -36,6 +36,7 @@ pipeline{
             steps{
                 script{
                     buildImage 'jsl:v1'
+                    runImage('js1:v1',3000)
                 }
             }
         }
