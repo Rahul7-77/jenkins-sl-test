@@ -35,10 +35,10 @@ pipeline{
         stage('Docker Build'){
             steps{
                 script{
-                    buildImage 'jsl'
+                    buildImage 'rahul7502/mydockerimages-1:js1'
                     dockerLogin 'docker-creds'
-                    dockerPush 'js1'
-                    runImage('js1',3000)
+                    dockerPush 'rahul7502/mydockerimages-1:js1'
+                    runImage('rahul7502/mydockerimages-1:js1',3000)
                 }
             }
         }
