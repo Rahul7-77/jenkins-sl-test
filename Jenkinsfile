@@ -18,7 +18,8 @@ pipeline{
                 // script{
                 //     gitClonePub 'https://github.com/Rahul7-77/jenkins-sl-test.git'
                 // }
-                git branch: 'main', changelog: false, poll: false, url: 'https://github.com/Rahul7-77/jenkins-sl-test.git'
+                // git branch: 'main', changelog: false, poll: false, url: 'https://github.com/Rahul7-77/jenkins-sl-test.git'
+                gitClonePub(url:'https://github.com/Rahul7-77/node-mysql-cicd-docker.git')
             }
         }
         stage('Compile'){
