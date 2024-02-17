@@ -36,6 +36,8 @@ pipeline{
             steps{
                 script{
                     buildImage 'jsl:v1'
+                    dockerLogin 'docker-creds'
+                    dockerPush 'js1:v1'
                     runImage('js1:v1',3000)
                 }
             }
