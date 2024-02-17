@@ -15,11 +15,7 @@ pipeline{
     stages{
         stage('Git Clone'){
             steps{
-                // script{
-                //     gitClonePub 'https://github.com/Rahul7-77/jenkins-sl-test.git'
-                // }
-                // git branch: 'main', changelog: false, poll: false, url: 'https://github.com/Rahul7-77/jenkins-sl-test.git'
-                gitClonePub(branch: 'main', changelog: false, poll: false, url: 'https://github.com/Rahul7-77/jenkins-sl-test.git')
+                git branch: 'main', changelog: false, poll: false, url: 'https://github.com/Rahul7-77/jenkins-sl-test.git'
             }
         }
         stage('Compile'){
