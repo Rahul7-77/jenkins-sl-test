@@ -15,9 +15,10 @@ pipeline{
     stages{
         stage('Git Clone'){
             steps{
-                script{
-                    gitClonePub 'https://github.com/Rahul7-77/jenkins-sl-test.git'
-                }
+                // script{
+                //     gitClonePub 'https://github.com/Rahul7-77/jenkins-sl-test.git'
+                // }
+                sh 'git clone https://github.com/Rahul7-77/jenkins-sl-test.git'
             }
         }
         stage('Compile'){
